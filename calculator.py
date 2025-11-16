@@ -8,7 +8,7 @@ One function per operation, in order.
 # First example
 import math
 def square_root(a):
-    if a < 0:
+    if a > 0:
         return math.sqrt(a)
     else:
         raise ValueError
