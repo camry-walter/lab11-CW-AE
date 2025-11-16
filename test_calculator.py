@@ -1,3 +1,7 @@
+# https://github.com/camry-walter/lab11-CW-AE.git
+# Partner 1: Camryn Walter
+# Partner 2: Adrian Espinoza
+
 import unittest
 import calculator
 

@@ -1,9 +1,6 @@
 # https://github.com/camry-walter/lab11-CW-AE.git
 # Partner 1: Camryn Walter
 # Partner 2: Adrian Espinoza
-
-#user.email"camryn.walter@ufl.edu git add calculator.py	"
-#user.name"Camryn Walter"
 """
 calculator.py
 - Defines functions used to create a simple calculator
