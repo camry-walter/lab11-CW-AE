@@ -1,5 +1,5 @@
 import unittest
-from calculator import *
+import calculator
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
@@ -11,11 +11,15 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 1
-    # def test_multiply(self): # 3 assertions
-    #     fill in code
+    def test_multiply(self): # 3 assertions
+        self.assertEqual(calculator.multiply(9, 3), 27)
+        self.assertEqual(calculator.multiply(-4, 2), -8)
+        self.assertEqual(calculator.multiply(6, 0), 0)
 
-    # def test_divide(self): # 3 assertions
-    #     fill in code
+    def test_divide(self): # 3 assertions
+        self.assertEqual(calculator.divide(3,  9), 3)
+        self.assertAlmostEqual(calculator.divide(7, 16), 2.28571, places = 3)
+        self.assertRaises(ZeroDivisionError, calculator.divide, 0, 6)
     # ##########################
 
     ######## Partner 2
@@ -34,21 +38,18 @@ class TestCalculator(unittest.TestCase):
     # ##########################
     
     ######## Partner 1
-    # def test_log_invalid_argument(self): # 1 assertion
-    #     # call log function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     logarithm(0, 5)
-    #     fill in code
+    def test_log_invalid_argument(self): # 1 assertion
+        self.assertRaises(ValueError, calculator.logarithm, 0, 5)
 
-    # def test_hypotenuse(self): # 3 assertions
-    #     fill in code
+    def test_hypotenuse(self): # 3 assertions
+        self.assertEqual(calculator.hypotenuse(3, 4), 5)
+        self.assertEqual(calculator.hypotenuse(5, 12), 13)
+        self.assertAlmostEqual(calculator.hypotenuse(4, 6), 7.211102550927978, places = 3)
 
-    # def test_sqrt(self): # 3 assertions
-    #     # Test for invalid argument, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #    square_root(NUM)
-    #     # Test basic function
-    #     fill in code
+    def test_sqrt(self): # 3 assertions
+        self.assertRaises(ValueError, calculator.square_root, -1)
+        self.assertAlmostEqual(calculator.square_root(4), 2.0, places = 3)
+        self.assertAlmostEqual(calculator.square_root(9), 3.0, places = 3)
     ##########################
 
 # Do not touch this
